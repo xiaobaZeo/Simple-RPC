@@ -19,7 +19,9 @@ public class RequestHandler {
         Object res = null;
         try{
             res = invokeTargetMethod(rpcRequestFormat, service);
-            if(res == null) throw new RuntimeException();
+            if(res == null) {
+                throw new RuntimeException();
+            }
             logger.info("服务：{} 方法调用成功：{}", rpcRequestFormat.getInterFaceName(), rpcRequestFormat.getMethodName());
         }catch (Exception e){
             logger.error("调用时发生错误：",e);

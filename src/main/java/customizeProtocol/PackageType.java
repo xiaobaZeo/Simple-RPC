@@ -7,9 +7,7 @@ public enum PackageType {
 
     final int code;
 
-    private PackageType(int code){
+    PackageType(int code) {
         this.code = code;
     }
-
-
 }

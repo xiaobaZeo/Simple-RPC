@@ -15,7 +15,7 @@ import java.net.Socket;
 /**
  * 线程池任务对象
  */
-public class RequestHandlerThread implements Runnable{
+public class RequestHandlerThread implements Runnable {
 
     private static final Logger logger = LoggerFactory.getLogger(RequestHandlerThread.class);
 
@@ -48,6 +48,7 @@ public class RequestHandlerThread implements Runnable{
             objectOutputStream.writeObject(RpcResponse.success(res));
             objectOutputStream.flush();
         } catch (Exception e) {
+            logger.error("接收RPCRequest对象失败，原因" + e.getMessage());
             e.printStackTrace();
         }
     }

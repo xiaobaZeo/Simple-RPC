@@ -5,7 +5,7 @@ public enum Response {
     SUCCESS(200, "OK"),
     FAIL(500, "NOT OK");
 
-    private final int value;
+    private final Integer value;
 
     private final String reason;
 
@@ -14,7 +14,7 @@ public enum Response {
         this.reason = reason;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return value;
     }
 
